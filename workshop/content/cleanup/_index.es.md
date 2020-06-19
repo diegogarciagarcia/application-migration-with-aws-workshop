@@ -16,7 +16,7 @@ Al acabar los laboratorios, asegurate de borrar _todos_ los recursos que hayas c
    - Modifica la **database** creada para eliminar la proteccion de eliminacion (aplicar cambios immediatamente)
     ![RDS Remove Deletion Protection](/cleanup/db-remove-deletion-protection.en.png)
 
-   - Delete created **databases** (without final snapshot and without retaining automated backups)
+   - Elimina la **databases** (sin el snapshot final y sin retener las copias de seguridad automaticas)
     ![RDS Confirm Deletion](/cleanup/db-delete-confirm.en.png)
 
 3. In <A href="https://us-west-2.console.aws.amazon.com/dms/v2/home?region=us-west-2#replicationInstances" target="_blank">AWS DMS Console</a>            
