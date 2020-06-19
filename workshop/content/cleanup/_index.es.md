@@ -12,8 +12,8 @@ Al acabar los laboratorios, asegurate de borrar _todos_ los recursos que hayas c
 
     ![CloudEndure Migration Remove Servers](/cleanup/ce-stop-remove-from-console.eng.png)
 
-2. In <a href="https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#databases:" target="_blank">AWS RDS Console</a>         
-   - Modify created **database** to remove Deletion Protection (apply changes immediately)
+2. En la  <a href="https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#databases:" target="_blank">AWS RDS Console</a>         
+   - Modifica la **database** creada para eliminar la proteccion de eliminacion (aplicar cambios immediatamente)
     ![RDS Remove Deletion Protection](/cleanup/db-remove-deletion-protection.en.png)
 
    - Delete created **databases** (without final snapshot and without retaining automated backups)
