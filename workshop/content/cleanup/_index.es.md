@@ -7,23 +7,23 @@ pre = "<b>5. </b>"
 Al acabar los laboratorios, asegurate de borrar _todos_ los recursos que hayas creado, incluyendo:
 
 1. En la <a href="https://console.cloudendure.com" target="_blank">Consola de CloudEndure</a>       
-   - Selecciona las maquinas que han sido migradas (con un checkbox) y haz click en **Machine Actions** -> **Stop Data Replication For 1 Machine**
-   - Selecciona las maquinas que fueron migradas (con un checkbox) y haz clien en **Machine Actions** -> **Remove 1 Machine from This Console**
+   - Selecciona las maquinas que han sido migradas (con un checkbox) y haz click en **Acciones de la maquina (Machine Actions)** -> **Deten la replica de datos para la maquina 1 (Stop Data Replication For 1 Machine)**
+   - Selecciona las maquinas que fueron migradas (con un checkbox) y haz clien en **Acciones de la maquina (Machine Actions)** -> **Borra 1 Maquina de esta consola (Remove 1 Machine from This Console)**
 
     ![CloudEndure Migration Remove Servers](/cleanup/ce-stop-remove-from-console.eng.png)
 
-2. En la  <a href="https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#databases:" target="_blank">AWS RDS Console</a>         
-   - Modifica la **database** creada para eliminar la proteccion de eliminacion (aplicar cambios immediatamente)
+2. En la  <a href="https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#databases:" target="_blank">Consola AWS de RDS</a>         
+   - Modifica la **base de datos** creada para eliminar la proteccion de eliminacion (aplicar cambios immediatamente)
     ![RDS Remove Deletion Protection](/cleanup/db-remove-deletion-protection.en.png)
 
-   - Elimina la **databases** (sin el snapshot final y sin retener las copias de seguridad automaticas)
+   - Elimina la **base de datos** (sin el snapshot final y sin retener las copias de seguridad automaticas)
     ![RDS Confirm Deletion](/cleanup/db-delete-confirm.en.png)
 
-3. In <A href="https://us-west-2.console.aws.amazon.com/dms/v2/home?region=us-west-2#replicationInstances" target="_blank">AWS DMS Console</a>            
-   - Stop and (when it's in Stopped state) - delete created **tasks**. *Wait for the task to be deleted*.
-   - Delete created **endpoints**. *Wait for endpoints to be deleted*.
-   - Delete created **replication instances**. *Wait for the replication instance to be deleted*.
-   - Delete created **subnet group**
+3. En la <A href="https://us-west-2.console.aws.amazon.com/dms/v2/home?region=us-west-2#replicationInstances" target="_blank">consola de AWS DMS</a>            
+   - Deten y (cuando esten en el estado Parado) - borra las **tareas** creadas. *Espera a que las tareas hayan sido borradas*.
+   - Borra los **puntos de destino (endpoints)** creados . *Espera a que los puntos de destino se hayan borrado*.
+   - Borra las **instancias de replicacion (replication instances)**. *Espera a que las instancias de replicacion sean borradas*.
+   - Borra los **grupos de subred (subnet group)** creados
 
      Go to <a href="https://us-west-2.console.aws.amazon.com/dms/v2/home?region=us-west-2#dashboard" target="_blank">AWS DMS Dashboard</a> to confirm that everything was deleted (assuming you didn't use DMS before, you should see 0's everywhere, like on the screenshot below).
      ![DMS Dashboard confirmation](/cleanup/dms-dashboard-final.en.png)

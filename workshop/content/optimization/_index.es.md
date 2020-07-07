@@ -6,24 +6,24 @@ pre = "<b>4. </b>"
 +++
 
 
-Congratulation's, since you're here, you've managed to migrate an e-commerce application into AWS and can now look for ways to optimize the architecture to make it even more secure, highly-performant, resilient and so that is uses AWS infrastructure efficiently!
+Enhorabuena, si has llegado aqui has conseguido migrar una aplicación de commercio electrónico a AWS y ahora puedes mirar como optimizar la arquitectura para hacerlo incluso mas seguro, de alto rendimiento, resistente y ¡que use la infraestructura de AWS eficientemente!
 
-Below you will find ideas about what you can do taking into account <a href="https://aws.amazon.com/architecture/well-architected/" target="_blank">5 AWS Well-Architected Pillars</a> - Operational Excellence, Security, Reliability, Performance Efficiency  and Cost Optimization.
+Mas abajo encontrara ideas que puede considerar <a href="https://aws.amazon.com/architecture/well-architected/" target="_blank">5 Pilares del Marco de Buena Arquitectura de AWS</a> - Excelencia Operativa, Seguridad, Fiabilidad, Eficacia del rendimiento y Optimizacion de costes.
 
-You can also learn more about **AWS Well Architected** by watching the video below.
+Tambien puede aprender mas sobre **Marco de Buena Arquitectura** viendo el video de abajo.
 <center>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MfxF-FYEFjY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
-### Operational Excellence
+### Excelencia Operativa
 
-- Configure a <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html" target="_blank">CloudWatch dashboard</a> to monitor your resources in a single view, even across AWS regions.
-- Configure a <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html" target="_blank">persistent CloudTrail trail</a> to be able to monitor, audit and alert on what is happening in your AWS accounts
+- Configura un a <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html" target="_blank"> informe de CloudWatch </a> para monitorizar tus recursos en una unica vista, incluso a traves de varias regiones de AWS.
+- Configura un <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html" target="_blank">registro persistente de CloudTrail</a> para ser capaz de monitorizar, auditar y alertar que esta pasando en tus cuentas de AWS
 
-### Security  
-- Switch to HTTPS with <a href="https://aws.amazon.com/certificate-manager/" target="_blank">AWS Certificate Manager</a> managed SSL/TLS certificates to encrypt customer data in transit (certificates are already provisioned in this workshop!)
-- <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html" target="_blank">Encrypt EBS volumes</a> to protect customer data at rest
-- Enable <a href="https://aws.amazon.com/waf/"  target="_blank">AWS Web Application Firewall (AWS WAF)</a> to protect your web application from known attacks (you can do it on <a href="https://aws.amazon.com/blogs/aws/aws-web-application-firewall-waf-for-application-load-balancers/" target="_blank">Application Load Balancer</a> or event better on the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/cloudfront-features.html" target="_blank">Amazon CloudFront distribution</a>)
+### Seguridad  
+- Cambia a HTTPS con <a href="https://aws.amazon.com/certificate-manager/" target="_blank">AWS Certificate Manager</a> gestiona certificados SSL/TLS para encriptar datos de cliente en transito (¡los certificados ya se proporcionan en este laboratorio!) 
+- <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html" target="_blank">Encripta volumenes EBS</a> para proteger los datos del cliente en reposo
+- Habilita <a href="https://aws.amazon.com/waf/"  target="_blank">AWS Web Application Firewall (AWS WAF)</a> para proteger tu aplicacion web de ataques conocidos (puedes hacerlo aqui <a href="https://aws.amazon.com/blogs/aws/aws-web-application-firewall-waf-for-application-load-balancers/" target="_blank">Application Load Balancer</a> o incluso mejor en <a href="https://docs.aws.amazon.com/waf/latest/developerguide/cloudfront-features.html" target="_blank">Amazon CloudFront distribution</a>)
 - Use <a href="https://aws.amazon.com/guardduty/" target="_blank">Amazon GuardDuty</a> to protect your AWS account and workloads with intelligent threat detection and continuous monitoring
 
 ### Reliability
